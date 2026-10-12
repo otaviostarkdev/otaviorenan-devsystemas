@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orçamento — Otávio Renan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left mono"><span class="dot"></span>PELOTAS/RS • ATENDIMENTO NACIONAL <span class="sep hide-md"></span><span class="hide-md">WHATSAPP (53) 99707-3648</span></div><div class="top-bar-right"><span class="badge mono"><span class="badge-dot"></span>5 ANOS • +50 PROJETOS • SUPORTE DIRETO</span></div></div></div>
+  <header id="header" class="header scrolled"><div class="container header-inner"><a class="logo" href="index.html"><div class="logo-box">OR</div><div class="logo-text"><strong>OTÁVIO RENAN</strong><span class="mono">TECNICO DEV SYSTEMS</span></div></a><nav class="nav hide-mobile-nav"><a href="sobre.html">sobre</a><a href="portfolio.html">portfólio</a><a href="orcamento.html" style="color:#fff" >orçamento</a></nav><div class="header-actions"><a href="https://wa.me/5553997073648" target="_blank" class="btn btn-white hide-mobile">falar no whatsapp</a><a href="index.html" class="btn btn-accent hide-mobile" style="margin-left:8px">voltar</a><button id="menuBtn" class="menu-btn"><span></span><span></span></button></div></div><div id="mobileMenu" class="mobile-menu"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="portfolio.html">Portfólio</a><a href="orcamento.html" style="color:#fff">Orçamento</a></div></header>
+
+  <section class="section section-light2" style="padding-top:96px;min-height:80vh">
+    <div class="container split">
+      <div>
+        <span class="mono label dark">// ORÇAMENTO</span>
+        <h1 class="dark-h2 big" style="margin-top:12px">Vamos tirar seu projeto do papel em <em style="color:#C6FF00;background:#000;padding:0 8px;border-radius:8px;font-style:normal">48h.</em></h1>
+        <p class="light-p" style="margin-top:16px">Respondo em até 2h no WhatsApp com valor fechado e prazo. Sem enrolação, direto comigo.</p>
+        <div class="contact-ctas" style="margin-top:32px">
+          <a href="https://wa.me/5553997073648?text=Ola%20Otavio!%20Quero%20um%20orcamento%20para%20meu%20projeto." target="_blank" class="btn btn-accent btn-large">quero fazer um orçamento <span>→</span></a>
+          <div class="mono hero-note">(53) 99707-3648 • resposta em até 2h</div>
+        </div>
+        <ul class="check-list" style="margin-top:32px"><li>✓ Orçamento gratuito e sem compromisso</li><li>✓ 5 anos • +50 projetos • suporte direto</li><li>✓ Parcelamento em até 12x</li></ul>
+      </div>
+      <div>
+        <div class="contact-card" style="background:#fff">
+          <div class="mono small">SIMULADOR RÁPIDO</div>
+          <div style="margin-top:20px;display:flex;flex-direction:column;gap:16px">
+            <label class="mono" style="font-size:11px;color:#888">TIPO DE PROJETO</label>
+            <select id="tipo" style="height:48px;border-radius:12px;border:1px solid #ddd;padding:0 16px;font-size:14px">
+              <option>Site Institucional / Landing</option><option>E-commerce / Loja Virtual</option><option>Sistema Web / ERP / CRM</option><option>Aplicativo</option><option>Automação / Bot WhatsApp</option>
+            </select>
+            <label class="mono" style="font-size:11px;color:#888">ORÇAMENTO ESTIMADO</label>
+            <input id="valor" placeholder="Ex: R$ 3.000" style="height:48px;border-radius:12px;border:1px solid #ddd;padding:0 16px;font-size:14px">
+            <label class="mono" style="font-size:11px;color:#888">DESCREVA SEU PROJETO</label>
+            <textarea id="desc" rows="4" placeholder="O que você precisa?" style="border-radius:12px;border:1px solid #ddd;padding:16px;font-size:14px;resize:none"></textarea>
+            <button onclick="enviarOrcamento()" class="btn btn-accent btn-full" style="height:52px">enviar pro WhatsApp →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function enviarOrcamento(){
+      const tipo=document.getElementById('tipo').value;
+      const valor=document.getElementById('valor').value;
+      const desc=document.getElementById('desc').value;
+      const msg=`Olá Otávio! Quero um orçamento:%0A%0A• Tipo: ${tipo}%0A• Orçamento estimado: ${valor}%0A• Descrição: ${desc}`;
+      window.open(`https://wa.me/5553997073648?text=${msg}`,'_blank');
+    }
+  </script>
+
+  <footer class="footer"><div class="container footer-inner"><div><div class="logo"><div class="logo-box small">OR</div><strong>Otávio Renan — Técnico em Desenvolvimento de Sistemas — Pelotas RS</strong></div><p class="mono footer-p">Sites, sistemas, aplicativos e automações personalizados e sob medida.</p></div><div class="footer-right mono"><span>© 2026 Otávio Renan</span><span>Pelotas/RS • Atendimento Nacional</span></div></div><div class="footer-bottom"><div class="container footer-bottom-inner mono"><span>otavio renan@dev — build v2.0</span><span class="hide-mobile">preto #080808 • verde #C6FF00</span></div></div></footer>
+  <div class="sticky-cta"><a href="https://wa.me/5553997073648" target="_blank" class="btn btn-accent btn-full">quero fazer um orçamento →</a></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
